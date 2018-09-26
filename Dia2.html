@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Raleway", Arial, sans-serif}
+.w3-row img {margin-bottom: -8px}
+</style>
+<body>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button" class="menu-top-active" >Día 1</a>
+    <a href="dia2.html" class="w3-bar-item w3-button w3-hide-small"> Día 2</a>
+    <a href="dia3.html"class="w3-bar-item w3-button w3-hide-small" > Día 3</a>
+    <a href="dia4.html" class="w3-bar-item w3-button w3-hide-small"> Día 4</a>
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about"  onclick="toggleFunction()" >Día 1</a>
+    <a href="#portfolio"  onclick="toggleFunction()">Día 2</a>
+    <a href="#contact"  onclick="toggleFunction()">Día 3</a>
+    
+  </div>
+</div>
+</div>
+  </header>
+
+  <!-- Photo Grid -->
+  <div class="w3-row">
+    <div class="w3-half">
+      <img src="Imagenes/Pin.jpg" style="width:100%">
+      <img src="Imagenes/Pintu.jpg" style="width:100%">
+      <img src="Imagenes/Paisa.jpg" style="width:100%">
+    </div>
+
+    <div class="w3-half">
+      <img src="Imagenes/Escul.jpg" style="width:100%">
+      <img src="/w3images/streetart4.jpg" style="width:100%">
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Footer / About Section -->
+<footer class="w3-light-grey w3-padding-64 w3-center" id="about">
+  <h2>REVIEW DEL SEGUNDO DÍA</h2>
+  <form style="margin:auto;width:60%" action="/action_page.php" target="_blank">
+    <p>El Genio Leonardo Da Vinci<br>
+Si andas cerca del centro cultural, o incluso no tanto, te recomendamos darle una oportunidad a la exposición El Genio Leonardo Da Vinci, la exposición los muestra algunas de las maquinas que el genio inventó, obviamente las maquinas no son genuinas pero son totalmente fieles.a los bocetos encontrados en los libros de Da Vinci, a lo largo de la exposición te encontrarás con más de 30 reproducciones de inventos, bocetos e incluso le podrás echar un ojo a algunas reproducciones exactas de la Gioconda o La dama del armiño dos de las obras más famosas del genio florentino.<br>
+
+Ubicación: CECEQ Gomez Morín, Queretaro<br>
+Precio: $50 entrada general, $40 estudiantes<br>
+Recomendaciones: Si juntas a 20 compas podrás agenda una visita guiada en donde te darán datos que no encontrarás en la exposición.<br>
+Review: Esta chido volvería a ir<br> 
+
+CECEQ<br>
+Es chido encontrar lugares como el Centro Educativo y Cultural del Estado de Queretaro, siempre se agradece que el gobierno otorgue a la banda lugares en donde expresarse, y aprender un montón de cosas, el centro cultural ofrece distintas exposiciones tanto temporales como permanentes de distintas índoles, sin embargo a pesar de que no asistas a ninguna de estas exposiciones puedes ir a pasar el rato ya que normalmente encontrarás muy buen ambiente, uno de los highlights de el lugar son los murales que los jóvenes de la zona han pintado con recursos otorgados por organizaciones privadas, creemos cuando te decimos que estarás mucho tiempo intentando descifrar los distintos mensajes de los artistas.<br>
+Ubicación, centro de Queretaro a un lado de la alameda.<br> 
+Precio: De a grapa<br> 
+Recomendaciones: si vas los fines de semana encontrarás muchos eventos muy interesantes además de el mercancía que venden los artesanos de la zona.<br> </p>
+  </form>
+  <br>
+</footer>
+ 
+</body>
+<script>
+
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+</html>
