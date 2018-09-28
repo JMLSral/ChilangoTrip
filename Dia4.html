@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
-<title>CHILANGO TRIP DÍA 4</title>
+<title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">}<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
@@ -14,47 +17,94 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1 {font-family: "Raleway", sans-serif}
-body, html {height: 100%}
-.bgimg {
-    background-image: url('Imagenes/Atardecer.jpg');
-    min-height: 100%;
-    background-position: center;
-    background-size: cover;
-}
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-quarter img{margin-bottom: -6px; cursor: pointer}
+.w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
 </style>
-<body>
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="index.html" class="w3-bar-item w3-button" class="menu-top-active" >Día 1</a>
+<body class="w3-light-grey">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
+  <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">CLOSE</a> 
+<a href="#home" class="w3-bar-item w3-button" class="menu-top-active" >Día 1</a>
     <a href="Dia2.html" class="w3-bar-item w3-button w3-hide-small"> Día 2</a>
     <a href="Dia3.html"class="w3-bar-item w3-button w3-hide-small" > Día 3</a>
     <a href="Dia4.html" class="w3-bar-item w3-button w3-hide-small"> Día 4</a>
-    <a href="Dia5.html" class="w3-bar-item w3-button w3-hide-small"> Día 5</a>
-    </a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">CHILANGO TRIP DÍA 4</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+  
+  <!-- Photo grid -->
+  <div class="w3-row w3-grayscale-min">
+    <div class="w3-quarter">
+      <img src="Imagenes/Corazonjpg" style="width:100%" onclick="onClick(this)" alt="Un Corazón Herido">
+      <img src="Imagenes/Leon.jpg" style="width:100%" onclick="onClick(this)" alt="Léon Geométrico">
+      <img src="Imagenes/Arca.jpg" style="width:100%" onclick="onClick(this)" alt="El Arca">
+   </div>
+    
+   <div class="w3-quarter">
+      <img src="Imagenes/Aguila.jpg" style="width:100%" onclick="onClick(this)" alt="Aguila Protectora">
+      <img src="Imagenes/Cerdito.jpg" style="width:100%" onclick="onClick(this)" alt="Cerdito Indigena">
+      <img src="Imagenes/Auto.jpg" style="width:100%" onclick="onClick(this)" alt="Mercedes Gaviota">
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="Imagenes/Toro1.jpg" style="width:100%" onclick="onClick(this)" alt="Toro Geométrico">
+      <img src="Imagenes/Marcos.jpg" style="width:100%" onclick="onClick(this)" alt="Pinturas de Indígenas">
+      <img src="Imagenes/Figuras.jpg" style="width:100%" onclick="onClick(this)" alt="Figuras de Indígenas">
+    </div>
+
+    <div class="w3-quarter">
+      <img src="Imagenes/Pintura.jpg" style="width:100%" onclick="onClick(this)" alt="Pintura">
+      <img src="Imagenes/Convento.jpg" style="width:100%" onclick="onClick(this)" alt="Museo">
+      <img src="Imagenes/Tributo.jpg" style="width:100%" onclick="onClick(this)" alt="Tributo">
+    </div>
   </div>
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about"  onclick="toggleFunction()" >Día 1</a>
-    <a href="#portfolio"  onclick="toggleFunction()">Día 2</a>
-    <a href="#contact"  onclick="toggleFunction()">Día 3</a>
-    
+  <!-- Pagination -->
+  
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
   </div>
-</div>
-</div>
-<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-  <div class="w3-display-middle">
-    <h1 class="w3-jumbo w3-animate-top">MUY PRONTO</h1>
-    <hr class="w3-border-grey" style="margin:auto;width:40%">
-    <p class="w3-large w3-center">Falta 1 día</p>
-  </div>
-  <div class="w3-display-bottomleft w3-padding-large">
-  </div>
-</div>
+
+  <!-- About section -->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+    <h4><b>REVIEW DEL DÍA 4</b></h4>
+    <img src="/w3images/avatar_hat.jpg" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
+    <div class="w3-content w3-justify" style="max-width:600px">
+      <h4>My Name</h4>
+      <p>Museo de Arte de Queretaro<br>
+Caminando por el centro sin esperarlo nos topamos con una de las mejores experiencias que hemos tenido en este viaje, el museo de Arte de Queretaro, albergado por un antiguo convento remodelado en la época de Don Porfirio el museo te llevará a un viaje de emociones a lo largo de sus diferentes obras que van desde Rufino Tamayo hasta Roberto Montenegro, el museo te sorprenderá cada vez más en cada sala que visites, tuvimos la suerte de toparnos con la exposición de Fernando Andriacci un mexicano que te llevará a un recorrido por la flora y fauna de México como nunca lo habías visto.<br>
+Ubicación: Calle Ignacio Allende Sur 14, Centro - Queretaro<br>
+Precio: De a grapa<br>
+Recomendaciones: lleva tiempo, el museo no es muy grande sin embargo te recomendamos darte la oportunidad de contemplar cada obra con detenimiento.
+Review: Tienes que ir<br> 
+
+
+Centro de desarrollo artesanal indigena<br>
+Es curioso como a veces ignoramos tanto nuestras raíces sin darnos cuenta y dejamos de lado cosas tan valiosas como lo es el comercio local, el Centro de desarrollo artesanal indígena es una parada imperdible en tu tour por Queretaro, el centro ofrece un pequeño museo en donde podrás ver piezas impresionantes traídas de distintos lugares de la república además el centro ofrece un lugar a los indigenas locales en donde piden vender sus obras a precios justos, créeme no te arrepentirás de pagar por obras tan especiales, incluso pude que creas que son una ganga, sin dudarlo un lugar que tienes que visitar.<br>
+Ubicación: Calle Ignacio Allende Sur 20, Centro - Querétaro<br>
+Precio: De a grapa<br>
+Recomendaciones: Lleva varo, créeme que te enamorarás de alguna pieza y no quieres ser el dude ande regateando, no lo haga compa.
+Review: tienes que ir<br>
+      </p>
+
+<!-- End page content -->
 <script>
 
 
@@ -87,5 +137,28 @@ function toggleFunction() {
     }
 }
 </script>
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+
 </body>
 </html>
